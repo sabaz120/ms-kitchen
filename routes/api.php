@@ -21,7 +21,6 @@ Route::get('/',function(){
 Route::prefix('v1')->group(function () {
     Route::prefix('orders')->group(function () {
         Route::get('/', [OrderController::class, 'index']);
-        Route::get('/{ingredient}', [OrderController::class, 'show']);
         Route::post('/', [OrderController::class, 'store']);
     });
 });
